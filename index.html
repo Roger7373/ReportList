@@ -109,7 +109,10 @@
  .list-tools{gap:6px}
  .view-toggle{padding:7px 8px}
 }
-
+@media(max-width:650px){
+  .floating-add{display:none!important}
+  .defect-head>.btn{display:inline-flex!important}
+}
 </style></head><body>
 <header><div class="wrap"><div><div class="brand">DEFECT LIST <span class="version">V1.2.3 FINAL</span></div><div class="subtitle">Site Quality · Project Records</div></div><div class="top-project"><select id="projectSelect" aria-label="选择工程项目"></select><button class="icon-btn" id="projectAddTop" aria-label="新增工程">＋</button></div></div></header>
 <main>
