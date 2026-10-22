@@ -384,4 +384,8 @@ async function exportPhoto(id){const p=cur(),ph=p.photos.find(x=>x.id===id);if(!
 $('sharePDF').onclick=async()=>{if(!lastPdf)return;const file=new File([lastPdf],lastPdfName,{type:'application/pdf'});if(navigator.canShare&&navigator.canShare({files:[file]})){try{await navigator.share({files:[file],title:lastPdfName})}catch(e){if(e.name!=='AbortError')toast('分享失败，请从 Files 分享')} }else{downloadBlob(lastPdf,lastPdfName);toast('已重新下载 PDF，可从 Files 分享')}};
 window.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
 load().then(()=>{if('serviceWorker' in navigator&&location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(console.warn)});
-</script></body></html>
+
+</script>
+<script src="./defect-pdf-share-fix-20261022.js?v=1"></script>
+</body></html>
+
